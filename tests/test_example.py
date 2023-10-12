@@ -9,8 +9,8 @@ from example import Query, apply_transformation, query_by_column
 
 @pytest.fixture
 def test_df():
-    test_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    path = os.path.join(test_dir, "data", "gd1_data.csv")
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path = os.path.join(root_dir, "data", "gd1_data.csv")
     return pd.read_csv(path)
 
 
